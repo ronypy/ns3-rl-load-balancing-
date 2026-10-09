@@ -1,0 +1,29 @@
+# Surrogate (pure-Python) 7-cell LTE hotspot scenario. Mirrors plan.md Section 4.
+sim:
+  isd_m: 500.0
+  area_radius_m: 700.0
+  n_ues: 80
+  hotspot_frac: 0.4
+  hotspot_radius_m: 100.0
+  speed_min: 1.5
+  speed_max: 3.0
+  demand_mbps: 0.5
+  bandwidth_mhz: 5.0
+  base_tx_dbm: 40.0
+  shadow_sigma_db: 4.0
+  hysteresis_db: 3.0
+  ttt_evals: 2          # consecutive 0.25 s evaluations (~256 ms TTT)
+  substep_s: 0.25
+  pingpong_window_s: 2.0
+env:
+  step_s: 1.0
+  episode_steps: 60
+  power_min_db: -6.0
+  power_max_db: 3.0
+  tput_ref_mbps: 10.0   # per-cell throughput normalisation
+  ho_scale: 0.1         # handovers per step per cell that map to 1.0
+reward:
+  w_fair: 1.0
+  w_mean: 0.5
+  w_edge: 0.5
+  w_ho: 0.5

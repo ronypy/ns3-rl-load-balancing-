@@ -1,0 +1,11 @@
+agent: noisy_dueling_dqn
+hidden: 128
+lr: 1.0e-3
+gamma: 0.95
+buffer_size: 50000
+batch_size: 64
+learn_start: 1000
+tau: 0.005
+sigma_init: 0.5
+episodes: 200
+train_seeds: [1, 2, 3]

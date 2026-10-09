@@ -1,0 +1,13 @@
+agent: dqn
+hidden: 128
+lr: 1.0e-3
+gamma: 0.95
+buffer_size: 50000
+batch_size: 64
+learn_start: 1000
+tau: 0.005
+eps_start: 1.0
+eps_end: 0.05
+eps_decay_frac: 0.3
+episodes: 200
+train_seeds: [1, 2, 3]
